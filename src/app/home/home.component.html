@@ -1,0 +1,455 @@
+<div *ngIf="showHome && !showProfile ">
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="d-flex align-items-center">
+        <div class="container-fluid container-xxl d-flex align-items-center">
+            <div id="logo" class="me-auto">
+                <h1 style="color: #4db8ef;" href="index.html" class="scrollto">DEMO APP</h1>
+            </div>
+            <nav id="navbar" class="navbar order-last order-lg-0">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                    <li><a class="nav-link scrollto" href="#about">ABOUT US</a></li>
+                    <li><a class="nav-link scrollto" href="#speakers">JOBS</a></li>
+                    <li><a class="nav-link scrollto" href="#schedule">CLIENTS</a></li>
+                    <li><a class="nav-link scrollto" href="#venue">EMPLOYERS</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+            <!-- .navbar -->
+            <a class="buy-tickets scrollto" href="#buy-tickets">Contact Us</a>
+        </div>
+    </header>
+    <!-- End Header -->
+
+
+
+
+
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero">
+        <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
+            <h1 class="mb-4">I'm looking for..</h1>
+            <form method="POST" action="#">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 col-md-10 d-flex">
+                        <input type="text" class="form-control" placeholder="Enter your job Description">
+                        <!-- <button type="submit" class="ms-2">Subscribe</button> -->
+                        <a class="buy-tickets scrollto pt-2" href="#" style="border-radius:0px;font-size:15px;"><i class="fa fa-search"></i>&nbsp;&nbsp;Search</a>
+                    </div>
+                </div><br>
+                <div class="row justify-content-center d-flex">
+                    <div class="col-lg-6 col-md-10 d-flex" style="color: #fff;">
+                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">&nbsp;
+                        <label for="vehicle1" class="lab"> Full Time</label>&nbsp;&nbsp;&nbsp;
+                        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                        <label for="vehicle2" class="lab"> Part time/Causal/fresher</label><br>
+
+                        <!-- <input type="submit" value="Submit"> -->
+                        <!-- <a class="buy-tickets scrollto pt-2" href="#" style="border-radius:0px;font-size:15px;"><i class="fa fa-search"></i>&nbsp;&nbsp;Search</a> -->
+                        <!-- <label for="country">Country</label> -->
+                        <div class="lab loc">
+                            <select id="job" name="country" class="p-2">
+                        <option>Search your location</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Bangloar">Bangloar</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+            <!-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox play-btn mb-4"></a> -->
+            <button class="reg" data-bs-toggle="modal" data-bs-target="#myModal"><a href="#" >Register</a></button>
+
+        </div>
+    </section>
+    <!-- End Hero Section -->
+
+    <main id="main">
+
+
+
+        <!-- ======= Supporters Section ======= -->
+        <section id="supporters" class="section-with-bg">
+
+            <div class="container" data-aos="fade-up">
+                <div class="section-header">
+                    <h5 class="">We're leaders in</h5>
+                    <h2>Creative Digital Recuitment</h2>
+
+
+
+                </div>
+                <p class="mt "> Based in Surry Hills, the Creative hub of Sysney we are surrounded by<br> creativity and that reflects on the type of jobs we recruit for.</p>
+                <button class="reg1"><a href="#" >FIND OUT MORE ABOUT US!</a></button>
+
+
+            </div>
+
+        </section>
+        <!-- End Sponsors Section -->
+
+
+        <section id="subscribe" class="section-with-bg">
+
+            <div class="container" data-aos="fade-up">
+                <div class="section-header">
+                    <h5 class="sub">subscribe to our job Seekar Malling list</h5>
+                    <input placeholder="Enter Your Email Address">
+
+                </div>
+            </div>
+
+        </section>
+
+
+
+
+
+    </main>
+    <!-- End #main -->
+
+</div>
+
+
+
+
+
+<!-- ///////////////////////////////////profile start///////////////////////////////////////////// -->
+
+<div *ngIf="showProfile && !showHome">
+
+    <header class="d-flex align-items-center" style="background-color: #4db8ef;height: 90px;">
+        <div class="container-fluid container-xxl d-flex align-items-center">
+            <div id="logo" class="me-auto">
+                <h1 style="color:#121212;font-weight:400px;" href="index.html" class="mt-4">DEMO APP</h1>
+            </div>
+            <nav id="navbar" class="navbar order-last order-lg-0">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                    <li><a class="nav-link scrollto" href="#about">ABOUT US</a></li>
+                    <li><a class="nav-link scrollto" href="#speakers">JOBS</a></li>
+                    <li><a class="nav-link scrollto" href="#schedule">CLIENTS</a></li>
+                    <li><a class="nav-link scrollto" href="#venue">EMPLOYERS</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+            <!-- .navbar -->
+            <a class="buy-tickets scrollto" href="#buy-tickets">Contact Us</a>
+        </div>
+    </header>
+    <div class="profile">
+        <div class="row" *ngFor="let data of enquiryData;">
+            <div class="col-4">
+                <div class="col-md-12" style="margin-left: 49px;">
+                    <!-- <img src="assets/img/baby-girl.jpg" alt="Girl in a jacket" width="135" height="150"> -->
+                    <img [src]="data.imgurl" width="135" height="135" class="img-fluid">
+                </div><br>
+                <div class="row">
+                    <div class="col-5">
+                        <button type="button" class="btn btn-warning">Edit Photo</button>
+                    </div>
+                    <div class="col-4" style="width: 42%;">
+                        <button type="submit" class="btn btn-warning" (click)="onEdit(data)" data-bs-toggle="modal" data-bs-target="#myModal">Edit Profile</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8">
+                <p>I'm <b class="color">{{data.fname}} {{data.lname}}</b> and I am above <b class="color">{{data.age}}</b> years and you emails to <b class="color">{{data.email}}</b>. I live in the state of <b class="color">{{data.state}}</b>. I like to
+                    play hockey. football and reading books And please send me newsletters. please reach out to me on my phone number <b class="color">{{data.mobileno}}</b>.
+                </p>
+                <div class="col-4">
+                    <button type="submit" class="btn btn-success">I Agree</button>
+                </div>
+            </div>
+
+
+        </div><br>
+        <div class="col-12 d-flex align-items-center justify-content-center">
+            <button type="submit" class="btn btn-primary" (click)="showMainHome()">Submit</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- ///////////////////////////////////profile end///////////////////////////////////////////// -->
+
+
+
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-4 col-md-6 footer-info">
+                    <div id="logo" class="me-auto">
+                        <h1 style="color: #4db8ef;" href="index.html" class="scrollto">DEMO APP</h1>
+                    </div>
+                    <p>In alias aperiam. Placeat tempore facere. Officiis voluptate ipsam vel eveniet est dolor et totam porro. Perspiciatis ad omnis fugit molestiae recusandae possimus. Aut consectetur id quis. In inventore consequatur ad voluptate cupiditate
+                        debitis accusamus repellat cumque.</p>
+                </div>
+
+                <div class="col-lg-4 col-md-6 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6 footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>
+                        A108 Adam Street <br> New York, NY 535022<br> United States <br>
+                        <strong>Phone:</strong> +1 5589 55488 55<br>
+                        <strong>Email:</strong> info@example.com<br>
+                    </p>
+
+                    <div class="social-links">
+                        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="google-plus"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="copyright">
+            &copy; Copyright <strong>Demo App</strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+            Designed by <a href="https://bootstrapmade.com/">@sheetalhatwar</a>
+        </div>
+    </div>
+</footer>
+<!-- End  Footer -->
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+
+<!-------------------------------------------- The Modal ----------------------------------------->
+<div class="modal" id="myModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header bg-primary">
+                <h4 class="modal-title text-light">Register</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <form [formGroup]="jobForm">
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img [src]="url" alt="Girl in a jacket" width="135" height="135">
+                            <input class="form-control image" type="file" formControlName="img" value (change)="onselectFile($event)">
+                            <input class="form-control image" type="text" placeholder="your image url" formControlName="imgurl" value>
+
+                        </div>
+                        <div class="col-md-9">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input class="form-control" type="text" placeholder="First Name" formControlName="fname" value>
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="form-control" type="text" placeholder="Last Name" formControlName="lname" value>
+                                </div>
+
+                            </div><br>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input class="form-control" type="email" placeholder="Email Id" formControlName="email" value>
+                                </div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input class="form-control" type="number" placeholder="(541)754-3010" formControlName="mobileno" value>
+                                </div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col-md-1">
+                                    <label>Age</label>
+                                </div>
+
+                                <div class="col-md-8">
+                                    <!-- <Input class="range" type="range" value="20" min="20" max="100" onChange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)" formControlName="age"> -->
+                                    <mat-slider [(ngModel)]="myModel" formControlName="age"></mat-slider>
+                                    <div>{{myModel}}</div>
+                                </div>
+                                <!-- <div class="col-md-3 ml-3"> <span id="rangeValue">20</span></div> -->
+
+                            </div><br>
+                            <div class="row">
+                                <div class="col-12">
+                                    <select id="state" name="state" class="form-select" formControlName="state" value>
+                                    <option value="" selected>State</option>
+                                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                    <option value="Assam">Assam</option>
+                                    <option value="Bihar">Bihar</option>
+                                    <option value="Chandigarh">Chandigarh</option>
+                                    <option value="Chhattisgarh">Chhattisgarh</option>
+                                    <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                                    <option value="Daman and Diu">Daman and Diu</option>
+                                    <option value="Delhi">Delhi</option>
+                                    <option value="Lakshadweep">Lakshadweep</option>
+                                    <option value="Puducherry">Puducherry</option>
+                                    <option value="Goa">Goa</option>
+                                    <option value="Gujarat">Gujarat</option>
+                                    <option value="Haryana">Haryana</option>
+                                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                    <option value="Jharkhand">Jharkhand</option>
+<!-- <option value="Karnataka">Karnataka</option>
+<option value="Kerala">Kerala</option>
+<option value="Madhya Pradesh">Madhya Pradesh</option>
+<option value="Maharashtra">Maharashtra</option>
+<option value="Manipur">Manipur</option>
+<option value="Meghalaya">Meghalaya</option>
+<option value="Mizoram">Mizoram</option>
+<option value="Nagaland">Nagaland</option>
+<option value="Odisha">Odisha</option>
+<option value="Punjab">Punjab</option>
+<option value="Rajasthan">Rajasthan</option>
+<option value="Sikkim">Sikkim</option>
+<option value="Tamil Nadu">Tamil Nadu</option>
+<option value="Telangana">Telangana</option>
+<option value="Tripura">Tripura</option>
+<option value="Uttar Pradesh">Uttar Pradesh</option>
+<option value="Uttarakhand">Uttarakhand</option>
+<option value="West Bengal">West Bengal</option> -->
+                                  </select>
+                                </div>
+                            </div><br>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <select id="state" name="country" class="form-select" formControlName="country" value>
+                                    <option value="" selected>country</option>
+                                    <option value="india">India</option>
+                                    <option value="USA">USA</option>
+                                    <option value="Japan">Japan</option>
+                                    <option value="Japan">pakisthan</option>
+                                </select>
+                                </div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input class="form-control" type="text" placeholder="Address">
+                                </div>
+                            </div><br>
+                            <!-- <div class="row">
+                                <div class="col-md-12">
+                                    <input class="form-control" type="text" placeholder="tags">
+                                </div><br><br>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <button class="bg-dark tag p-1">cricket &nbsp;<i class="bi bi-x x"></i></button>
+                                    </div>
+                                    <div class="col-4">
+                                        <button class="bg-dark tag p-1">football &nbsp;<i class="bi bi-x x"></i></button>
+                                    </div>
+                                    <div class="col-4">
+                                        <button class="bg-dark tag p-1">hockey &nbsp;<i class="bi bi-x x"></i></button>
+                                    </div>
+                                </div>
+                            </div><br> -->
+
+                            <!-- <div class="col-lg-12">
+                                <div id="row">
+                                    <div class="input-group m-3">
+                                        <div class="input-group-prepend">
+                                            <button class="btn btn-primary" id="DeleteRow" type="button">
+                                                <i class="bi bi-trash"></i>
+                                                Delete
+                                            </button>
+                                        </div>
+                                        <input type="text" class="form-control m-input">
+                                    </div>
+                                </div>
+
+                                <div id="newinput"></div>
+                                <button id="rowAdder" type="button" class="btn btn-dark">
+                                    <span class="bi bi-plus-square-dotted">
+                                    </span> ADD
+                                </button>
+                            </div> -->
+
+                            <!-- tags -->
+                            <mat-form-field class="input">
+                                <!--this contains the list of tags-->
+
+                                <mat-chip-list #taglist>
+                                    <!--set the properties for the tags-->
+
+                                    <mat-chip selected color="primary" *ngFor="let Tag of Tags" [selectable]="selectable" [removable]="removable" (removed)="remove(Tag)">
+                                        {{Tag}}
+                                        <!--add icon with matChipRemove 
+                                               directive to remove any tag-->
+
+                                        <mat-icon matChipRemove *ngIf="removable">cancel
+                                        </mat-icon>
+                                    </mat-chip>
+                                    <input placeholder="Add Tags" [matChipInputFor]="taglist" [matChipInputSeparatorKeyCodes]="separatorKeysCodes" (matChipInputTokenEnd)="add($event)" formControlName="tags" value/>
+                                </mat-chip-list>
+                            </mat-form-field>
+                            <!-- tages end -->
+
+                            <div class="row ">
+                                <div class="form-check ">
+                                    <input class="form-check-input " type="checkbox" value="checkbox" id="flexCheckDefault " formControlName="newsletter" value>
+                                    <label class="form-check-label " for="flexCheckDefault ">
+                                  Subscribe to newsletter
+                                </label>
+                                </div>
+                            </div>
+
+                        </div><br>
+                        <div class="modal-footer ">
+                            <div class="row ">
+
+                                <div class="col-5 ">
+                                    <button type="button " class="btn btn-dark " data-bs-dismiss="modal">Cancle</button>
+                                </div>&nbsp;&nbsp;
+                                <div class="col-5 ">
+                                    <div class="col-4 ">
+                                        <button type="submit " *ngIf="showAddButton" class="btn btn-primary " (click)="postFormData()" data-bs-dismiss="modal">Submit</button>
+                                        <!-- showMainProfile  !  onclick="closeSelf(); "  !!data-bs-dismiss="modal "-->
+
+                                        <button type="submit " *ngIf="showUpdatebutton" (click)="updateFormData()" class="btn btn-success" data-bs-dismiss="modal">Update</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+
+        <!-- Modal footer -->
+
+
+    </div>
+</div>
+<!-- -------------------------------------------- modal end ---------------------------------------------- -->

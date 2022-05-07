@@ -1,0 +1,141 @@
+#vehicle1 label {
+    color: #fff;
+}
+
+.lab {
+    margin-top: -5px;
+}
+
+.loc {
+    margin-left: 100px;
+}
+
+#job {
+    width: 388px;
+    border-radius: 5px;
+    border-color: #4db8ef;
+}
+
+#job:hover {
+    box-shadow: #333;
+    border: 15px;
+}
+
+.reg {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 50px;
+    transition: 0.5s;
+    line-height: 1;
+    margin: 10px;
+    color: #4db8ef;
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+    border: 2px solid #4db8ef;
+    margin-top: 120px;
+    background-color: rgb(12, 3, 72);
+}
+
+.reg1 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 50px;
+    transition: 0.5s;
+    line-height: 1;
+    margin: 10px;
+    color: #fff;
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+    border: 2px solid #4db8ef;
+    margin-top: 10px;
+    margin-left: 470px;
+}
+
+.mt {
+    margin-top: 60px;
+    margin-left: 379px;
+}
+
+.sub {
+    color: #fff;
+    font-weight: 400px;
+}
+
+.int {
+    padding: 10px;
+}
+
+
+/* range */
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap'); */
+
+#rangeValue {
+    /* position: relative; */
+    /* display: block; */
+    /* text-align: center; */
+    font-size: 22px;
+    color: rgb(83, 83, 83);
+    font-weight: 400;
+    margin-left: 50px;
+}
+
+.range {
+    width: 400px;
+    height: 10px;
+    -webkit-appearance: none;
+    background: rgb(73, 73, 73);
+    outline: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 1);
+}
+
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #4db8ef;
+    cursor: pointer;
+    border: 4px solid #333;
+    box-shadow: -407px 0 0 400px #4db8ef;
+}
+
+.tag {
+    color: #fff;
+}
+
+.x {
+    color: #f8e300;
+    margin-left: 15px;
+}
+
+.x:hover {
+    color: #4db8ef;
+}
+
+.profile {
+    padding: 104px 368px 119px 216px;
+}
+
+.image {
+    border: none;
+}
+
+.color {
+    color: #4db8ef;
+}
+
+#rowAdder {
+    margin-left: 17px;
+}

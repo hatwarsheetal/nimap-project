@@ -1,0 +1,77 @@
+{
+  "enquirydetails": [
+    {
+      "id": 1,
+      "img": " ",
+      "imgurl": " ",
+      "fname": " ",
+      "lname": " ",
+      "email": " ",
+      "mobileno": " ",
+      "age": " ",
+      "state": " ",
+      "country": " ",
+      "tags": " ",
+      "newsletter": " "
+    },
+    {
+      "img": "",
+      "imgurl": "",
+      "fname": "",
+      "lname": "",
+      "email": "",
+      "mobileno": "",
+      "age": 0,
+      "state": "",
+      "country": "",
+      "tags": "",
+      "newsletter": "",
+      "id": 2
+    },
+    {
+      "img": "",
+      "imgurl": "",
+      "fname": "",
+      "lname": "",
+      "email": "",
+      "mobileno": "",
+      "age": 0,
+      "state": "",
+      "country": "",
+      "tags": "zscd",
+      "newsletter": "",
+      "id": 3
+    },
+    {
+      "img": "C:\\fakepath\\baby-girl.jpg",
+      "imgurl": "",
+      "fname": "",
+      "lname": "",
+      "email": "",
+      "mobileno": "",
+      "age": 0,
+      "state": "",
+      "country": "",
+      "tags": "",
+      "newsletter": "",
+      "id": 4
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
